@@ -38,8 +38,8 @@ class Rate extends React.Component {
             (
               <div className='block flex-item' key={keyName}>
               <div className='currency-name'>{keyName}</div>
-              <div className='currency-in'>{this.state.currencyRate[keyName]}*</div>
-              <p>* Можно купить за 1 рубль</p>
+              <div className='currency-in'>{(1 / this.state.currencyRate[keyName]).toFixed(2)} руб.</div>
+              <p>* Курс за 1 еденицу</p>
             </div>
             )
             )}
