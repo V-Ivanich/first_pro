@@ -2,15 +2,18 @@
 .header-nav {
   background: #3b621c;
 }
-.header-nav li {
+.header-nav .ul {
   display: inline-block;
   padding: 15px 25px 15px;
 }
-.header-nav li a, .header-nav li a:visited {
+.li_k {
+  padding: 15px 20px;
+}
+.header-nav .ul, .header-nav .li_k:visited {
   color: #fff;
   text-decoration: none;
   display: block;
 }
-.header-nav li:hover {
+.li_k:hover {
   background: #487922;
 }

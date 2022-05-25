@@ -2,9 +2,12 @@
 import './App.css';
 import React from 'react';
 
+import { Routes, Route } from 'react-router-dom';
+
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Rate from './Rate/Rate';
+import About from './About/About';
 
 class App extends React.Component {
   // constructor(props) {
@@ -17,8 +20,10 @@ class App extends React.Component {
     <Header />
       <div className='container'>
         <main>
-          <Rate />
-          
+          <Routes>
+            <Route path='/' element={<Rate />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
         </main>
       </div>
 
