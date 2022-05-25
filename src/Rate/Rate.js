@@ -1,6 +1,7 @@
 
 import './Rate.css';
 import React from 'react';
+import Calc from '../Calc/Calc';
 
 
 class Rate extends React.Component {
@@ -36,14 +37,15 @@ class Rate extends React.Component {
           <div className='flex-container'>
             {Object.keys(this.state.currencyRate).map((keyName, i) =>
             (
-              <div className='block flex-item' key={keyName}>
-              <div className='currency-name'>{keyName}</div>
-              <div className='currency-in'>{(1 / this.state.currencyRate[keyName]).toFixed(2)} руб.</div>
-              <p>* Курс за 1 еденицу</p>
+            <div className='block flex-item' key={keyName}>
+               <div className='currency-name'>{keyName}</div>
+               <div className='currency-in'>{(1 / this.state.currencyRate[keyName]).toFixed(2)} руб.</div>
+               <p>* Курс за 1 единицу</p>
             </div>
             )
             )}
           </div>
+          <Calc rate = {this.state.currencyRate}/>
     </div>
     );
   }
